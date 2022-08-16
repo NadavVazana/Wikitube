@@ -9,7 +9,6 @@ function getVideo(value){
   return  axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=AIzaSyBNYE1N-RH4lspHbvSwxyFLutsHXsCSJVo&q=${value}`)
   .then(res => res.data.items).then(res => {
     var prm =  res.map(video=>getVideoInfo(video))
-    console.log(prm);
     gCache[value] = prm
     saveToStorage(CACHE_KEY,gCache)
     return prm
@@ -28,6 +27,7 @@ function getWiki(value){
 }
 
 function getWikiInfo(res){
+    if(!res.data.query.search.length) return null
     return {title:res.data.query.search[0].title,desc:res.data.query.search[0].snippet}
 }
 

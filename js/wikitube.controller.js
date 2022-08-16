@@ -52,8 +52,9 @@ function addSearchToFooter(value,isChange){
 }
 
 function renderWiki(value){
-    var strHTML = `<h2 class="wiki-title">${value.title}</h2><br>${value.desc}`
-    document.querySelector('.wiki').innerHTML = strHTML
+    if(!value) document.querySelector('.wiki').innerHTML = `No wiki info`
+  else{  var strHTML = `<h2 class="wiki-title">${value.title}</h2><br>${value.desc}`
+    document.querySelector('.wiki').innerHTML = strHTML}
 }
 
 function cleanVideos(){
