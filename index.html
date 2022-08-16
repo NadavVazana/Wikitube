@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiTube</title>
+</head>
+<body onload="init()">
+    <div class="page-container main-layout grid">
+        <div class="videos flex col">
+            
+            <h1 class="title">Wikitube</h1>
+       
+
+        <div class="video video1 flex"></div>
+        <div class="video video2 flex"></div>
+        <div class="video video3 flex"></div>
+        <div class="video video4 flex"></div>
+        <div class="video video5 flex"></div>
+        <section class="video-list flex col"></section>
+        </div>
+       
+    <div class="video-wiki flex col">
+        <section class="input-sec"><input onchange="searchVideo(this.value)" type="text"></section>
+        <iframe  class="video-player" src=""></iframe>
+        <section class="wiki"></section>
+    </div>
+    <button onclick ="clearHistory()" class="clear">Clear searches</button>
+    <input oninput="changeTheme(this.value)" type="color">
+    <section class="footer"></section>
+
+
+
+
+
+    <script src="js/services/storage.service.js"></script>
+    <script src="lib/axios.js"></script>
+    <script src="js/services/wikitube.service.js"></script>
+    <script src="js/wikitube.controller.js"></script>
+    </div>
+</body>
+</html>
