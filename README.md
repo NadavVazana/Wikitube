@@ -49,6 +49,7 @@ The application uses the software architectural of Model View Controller.
 In this page, you will see all the features of the application including searching videos, play the videos, top 5 trending Youtube videos and Wikipedia information about the search.
 
 <img src="https://res.cloudinary.com/ds8xkm0ue/image/upload/v1667164639/Untitled_geg8gj.png" />
+<hr />
 
 ### Authors
 
